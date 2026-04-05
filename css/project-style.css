@@ -1,0 +1,93 @@
+/* CSS FOR PROJECT DETAIL PAGES (css/project-style.css) */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --light-gray: #fcfcfc;
+    --border-color: #e1e4e8;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+    letter-spacing: -0.01rem;
+    line-height: 1.6;
+}
+
+.fw-black {
+    /* Using Inter for the heavy weight to match your 'Inter' font-family links */
+    font-family: 'Inter', sans-serif;
+    font-weight: 900 !important;
+}
+
+.navbar {
+    padding: 1.2rem 0;
+    background-color: var(--white);
+}
+
+h1 { 
+    letter-spacing: -3px; 
+    font-weight: 900;
+}
+
+h2 {
+    letter-spacing: -1px;
+    font-weight: 700;
+}
+
+.tracking-widest { 
+    letter-spacing: 0.15rem; 
+}
+
+/* GALLERY STYLING 
+   Fixes pixelation by using object-fit and centering the render logic.
+*/
+.img-container {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background-color: #ffffff; /* White background prevents "letterbox" bars from looking weird */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+/* Update this section in project-style.css */
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    
+    /* REMOVE: transform: translateZ(0) and backface-visibility */
+    /* These trigger the GPU in a way that 'file://' origins sometimes block */
+    
+    /* KEEP: High-quality scaling */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Very subtle hover that doesn't cause pixel distortion */
+.img-container:hover img {
+    transform: scale(1.02) translateZ(0);
+}
+
+/* GITHUB STYLE BAR UI (For the project composition section) */
+.gh-bar { 
+    height: 10px; 
+    border-radius: 5px; 
+    background-color: #f6f8fa; 
+    border: 1px solid var(--border-color); 
+    overflow: hidden; 
+}
+
+.lang-dot { 
+    font-size: 0.6rem; 
+    vertical-align: middle; 
+}
+
+/* Category Tags */
+.category-tag {
+    letter-spacing: 1px;
+    color: #6c757d;
+}

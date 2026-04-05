@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartWheels | Project Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/project-style.css">
+    <style>
+        .fw-black { font-weight: 900 !important; }
+        
+        /* Consistent Gallery Styling from The Reclair */
+        .gallery-container .img-container { 
+            aspect-ratio: 16 / 9; 
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer; 
+            transition: 0.3s; 
+            overflow: hidden;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Prevents the zoom issue */
+            image-rendering: -webkit-optimize-contrast; /* Keeps it sharp */
+        }
+
+        .gallery-container .img-container:hover { 
+            opacity: 0.85; 
+            transform: translateY(-5px); 
+        }
+        
+        /* GitHub Style Language Bar */
+        .gh-bar { height: 12px; border-radius: 6px; background-color: #f6f8fa; border: 1px solid #e1e4e8; overflow: hidden; }
+        .lang-dot { font-size: 0.6rem; vertical-align: middle; }
+    </style>
+</head>
+<body class="bg-white">
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-white border-bottom py-3">
+        <div class="container">
+            <a class="navbar-brand fw-black" href="../index.html">RK<span class="text-muted">.</span></a>
+            <a href="../index.html" class="btn btn-dark btn-sm rounded-pill px-4">BACK HOME</a>
+        </div>
+    </nav>
+
+    <main class="container py-5" style="margin-top: 80px;">
+    <div class="row align-items-end mb-5 pb-4 border-bottom">
+        <div class="col-lg-7">
+            <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 mb-3" style="font-size: 0.7rem;">VEHICLE MANAGEMENT • REACT</span>
+            <h1 class="display-3 fw-black" style="letter-spacing: -2px;">SmartWheels</h1>
+            <p class="lead text-secondary mt-3">
+                A streamlined vehicle management and booking platform built with React. This system focuses on user-centric design, real-time fleet availability, and a robust MongoDB backend for high-performance inventory tracking.
+            </p>
+        </div>
+        
+        <div class="col-lg-5 mt-4 mt-lg-0">
+            <div class="p-4 border rounded-4 bg-light shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="fw-black text-uppercase small mb-0">Project Composition</h6>
+                    <span class="small text-muted fw-bold">React Architecture</span>
+                </div>
+                <div class="progress gh-bar mb-3">
+                    <div class="progress-bar" style="width: 72%; background-color: #f1e05a;"></div> <div class="progress-bar" style="width: 18%; background-color: #563d7c;"></div> <div class="progress-bar" style="width: 7%; background-color: #e34c26;"></div>  <div class="progress-bar" style="width: 3%; background-color: #47A248;"></div>  </div>
+                <div class="row g-2">
+                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1 text-warning"></i> JS <span class="text-muted fw-normal">72.1%</span></div>
+                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #563d7c;"></i> CSS <span class="text-muted fw-normal">18.4%</span></div>
+                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #e34c26;"></i> HTML <span class="text-muted fw-normal">6.5%</span></div>
+                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #47A248;"></i> NoSQL <span class="text-muted fw-normal">3.0%</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <h5 class="fw-black text-uppercase small border-bottom pb-2">Frontend Stack</h5>
+            <p class="small text-muted">Developed with React.js, utilizing Hooks and Functional Components for a responsive, modular user interface.</p>
+        </div>
+        <div class="col-md-4">
+            <h5 class="fw-black text-uppercase small border-bottom pb-2">Data Management</h5>
+            <p class="small text-muted">Integrated MongoDB for dynamic storage of vehicle variants, pricing models, and user booking records.</p>
+        </div>
+        <div class="col-md-4">
+            <h5 class="fw-black text-uppercase small border-bottom pb-2">Key Features</h5>
+            <p class="small text-muted">Interactive fleet filtering, automated booking validation logic, and a clean administrative interface for inventory control.</p>
+        </div>
+    </div>
+
+       <h2 class="fw-black text-uppercase mb-4" style="letter-spacing: 2px;">System Preview</h2>
+<div class="row g-4 gallery-container">
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-1.png')">
+            <img src="../assets/img/sw-1.png" alt="Screen 1" decoding="sync">
+            <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-2.png')">
+            <img src="../assets/img/sw-2.png" alt="Screen 2" decoding="sync">
+            <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-3.png')">
+            <img src="../assets/img/sw-3.png" alt="Screen 3" decoding="sync">
+            <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-4.png')">
+            <img src="../assets/img/sw-4.png" alt="Screen 4" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-5.png')">
+            <img src="../assets/img/sw-5.png" alt="Screen 5" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-6.png')">
+            <img src="../assets/img/sw-6.png" alt="Screen 6" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-7.png')">
+            <img src="../assets/img/sw-7.png" alt="Screen 7" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-8.png')">
+            <img src="../assets/img/sw-8.png" alt="Screen 8" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-9.png')">
+            <img src="../assets/img/sw-9.png" alt="Screen 9" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-10.png')">
+            <img src="../assets/img/sw-10.png" alt="Screen 10" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-11.png')">
+            <img src="../assets/img/sw-11.png" alt="Screen 11" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-12.png')">
+            <img src="../assets/img/sw-12.png" alt="Screen 12" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-13.png')">
+            <img src="../assets/img/sw-13.png" alt="Screen 13" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-14.png')">
+            <img src="../assets/img/sw-14.png" alt="Screen 14" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-15.png')">
+            <img src="../assets/img/sw-15.png" alt="Screen 15" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-16.png')">
+            <img src="../assets/img/sw-16.png" alt="Screen 16" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-17.png')">
+            <img src="../assets/img/sw-17.png" alt="Screen 17" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-18.png')">
+            <img src="../assets/img/sw-18.png" alt="Screen 18" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-19.png')">
+            <img src="../assets/img/sw-19.png" alt="Screen 19" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-20.png')">
+            <img src="../assets/img/sw-20.png" alt="Screen 20" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-21.png')">
+            <img src="../assets/img/sw-21.png" alt="Screen 21" decoding="sync">
+        </div>
+    </div>
+
+    <div class="col-6 col-md-4">
+        <div class="img-container shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/sw-22.png')">
+            <img src="../assets/img/sw-22.png" alt="Screen 22" decoding="sync">
+        </div>
+    </div>
+
+</div>
+    </main>
+
+    <div class="modal fade" id="imgModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center">
+                    <img src="" id="modalTarget" class="img-fluid rounded-4 shadow-lg border border-dark" style="image-rendering: -webkit-optimize-contrast;">
+                    <div class="mt-3">
+                        <button class="btn btn-light rounded-pill px-5 fw-bold shadow" data-bs-dismiss="modal">CLOSE VIEW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 text-center text-muted border-top bg-white small mt-5">
+        © 2026 RUMAYSA KHAN • SMARTWHEELS DEVELOPMENT
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function setModalImg(src) {
+            document.getElementById('modalTarget').src = src;
+        }
+    </script>
+</body>
+</html>
