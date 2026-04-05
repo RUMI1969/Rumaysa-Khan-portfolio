@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scentilla | Project Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Strict 3-per-row grid logic */
+        @media (min-width: 992px) {
+            .gallery-container .col-lg-4 {
+                flex: 0 0 auto;
+                width: 33.333333%;
+            }
+        }
+        .fw-black { font-weight: 900 !important; }
+
+        /* GitHub Style Bar UI */
+        .gh-bar { height: 10px; border-radius: 5px; background-color: #f6f8fa; border: 1px solid #e1e4e8; overflow: hidden; }
+        .lang-dot { font-size: 0.6rem; vertical-align: middle; }
+    </style>
+</head>
+<body class="bg-white">
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-white border-bottom py-3">
+        <div class="container">
+            <a class="navbar-brand fw-black" href="../index.html" style="font-family: 'Inter';">RK<span style="color:#ddd">.</span></a>
+            <a href="../index.html" class="btn btn-dark btn-sm rounded-pill px-4">BACK HOME</a>
+        </div>
+    </nav>
+
+    <main class="container py-5" style="margin-top: -40px;">
+        <div class="row align-items-center mb-5 pb-4 border-bottom">
+            <div class="col-lg-7">
+                <span class="category-tag mb-2 d-block text-muted fw-bold small text-uppercase">UI/UX Design • Luxury E-commerce</span>
+                <h1 class="display-3 fw-black" style="font-family: 'Inter'; letter-spacing: -2px;">Scentilla</h1>
+                <p class="lead text-secondary mt-3">
+                    A luxury perfume e-commerce interface focusing on a "classy" minimalist aesthetic. Designed to provide a seamless, high-end shopping experience through refined typography and wood-beige textures.
+                </p>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="p-4 border rounded-4 bg-light shadow-sm">
+                    <h6 class="fw-black text-uppercase small mb-3" style="letter-spacing: 1px;">Project Composition</h6>
+                    <div class="progress gh-bar mb-3">
+                        <div class="progress-bar" style="width: 55%; background-color: #563d7c;"></div> <div class="progress-bar" style="width: 35%; background-color: #e34c26;"></div> <div class="progress-bar" style="width: 10%; background-color: #f1e05a;"></div> </div>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #563d7c;"></i> CSS <span class="text-muted fw-normal">55.2%</span></div>
+                        <div class="small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #e34c26;"></i> HTML <span class="text-muted fw-normal">34.8%</span></div>
+                        <div class="small fw-bold"><i class="fa-solid fa-circle lang-dot me-1 text-warning"></i> JS <span class="text-muted fw-normal">10.0%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <h5 class="fw-black text-uppercase small border-bottom pb-2">Design Stack</h5>
+                <p class="small text-muted">Advanced CSS Grids/Flexbox, custom @font-face integration, and CSS variables for a consistent "luxury" color palette.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-black text-uppercase small border-bottom pb-2">Experience</h5>
+                <p class="small text-muted">Optimized for high-fidelity image rendering and smooth scroll interactions to maintain a premium brand feel.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-black text-uppercase small border-bottom pb-2">Key Features</h5>
+                <p class="small text-muted">Dynamic image modal gallery, responsive navigation, and a minimalist product-focused grid layout.</p>
+            </div>
+        </div>
+
+        <h2 class="fw-black text-uppercase mb-5" style="letter-spacing: 2px; font-size: 2rem; font-family: 'Inter';">Project Gallery</h2>
+        
+        <div class="row g-4 gallery-container">
+            <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item shadow-sm border rounded-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/scentilla-1.png')"><img src="../assets/img/scentilla-1.png" class="img-fluid" alt="Screen 1"><div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div></div></div>
+            <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item shadow-sm border rounded-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/scentilla-2.png')"><img src="../assets/img/scentilla-2.png" class="img-fluid" alt="Screen 2"><div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div></div></div>
+            <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item shadow-sm border rounded-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/scentilla-3.png')"><img src="../assets/img/scentilla-3.png" class="img-fluid" alt="Screen 3"><div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div></div></div>
+            <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item shadow-sm border rounded-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/scentilla-4.png')"><img src="../assets/img/scentilla-4.png" class="img-fluid" alt="Screen 4"><div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div></div></div>
+            <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item shadow-sm border rounded-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/scentilla-5.png')"><img src="../assets/img/scentilla-5.png" class="img-fluid" alt="Screen 5"><div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div></div></div>
+            <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item shadow-sm border rounded-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/scentilla-6.png')"><img src="../assets/img/scentilla-6.png" class="img-fluid" alt="Screen 6"><div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div></div></div>
+            <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item shadow-sm border rounded-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/scentilla-7.png')"><img src="../assets/img/scentilla-7.png" class="img-fluid" alt="Screen 7"><div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div></div></div>
+            <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item shadow-sm border rounded-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg('../assets/img/scentilla-8.png')"><img src="../assets/img/scentilla-8.png" class="img-fluid" alt="Screen 8"><div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div></div></div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center">
+                    <img src="" id="modalTarget" class="img-fluid rounded-4 shadow-lg border border-dark">
+                    <div class="mt-3">
+                        <button class="btn btn-light rounded-pill px-5 fw-bold shadow" data-bs-dismiss="modal">CLOSE VIEW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 text-center text-muted border-top bg-white small mt-5">
+        © 2026 RUMAYSA KHAN • ALL RIGHTS RESERVED
+    </footer>
+
+    <script>
+        function setModalImg(src) {
+            document.getElementById('modalTarget').src = src;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

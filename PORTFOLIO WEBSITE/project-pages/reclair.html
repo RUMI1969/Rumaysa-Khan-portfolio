@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reclair | Project Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .fw-black { font-weight: 900 !important; }
+        .gallery-item { aspect-ratio: 4 / 3; object-fit: cover; cursor: pointer; transition: 0.3s; }
+        .gallery-item:hover { opacity: 0.85; transform: translateY(-5px); }
+        
+        /* GitHub Style Language Bar */
+        .gh-bar { height: 12px; border-radius: 6px; background-color: #f6f8fa; border: 1px solid #e1e4e8; overflow: hidden; }
+        .lang-dot { font-size: 0.6rem; vertical-align: middle; }
+    </style>
+</head>
+<body class="bg-white">
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-white border-bottom py-3">
+        <div class="container">
+            <a class="navbar-brand fw-black" href="../index.html">RK<span class="text-muted">.</span></a>
+            <a href="../index.html" class="btn btn-dark btn-sm rounded-pill px-4">BACK HOME</a>
+        </div>
+    </nav>
+
+    <main class="container py-5" style="margin-top: -20px;">
+        <div class="row align-items-end mb-5 pb-4 border-bottom">
+            <div class="col-lg-7">
+                <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 mb-3" style="font-size: 0.7rem;">SUSTAINABILITY • REACT</span>
+                <h1 class="display-3 fw-black" style="letter-spacing: -2px;">The Reclair</h1>
+                <p class="lead text-secondary mt-3">
+                    An e-commerce platform dedicated to the circular economy, focusing on the resale and upcycling of clothing to reduce textile waste through digital innovation.
+                </p>
+            </div>
+            
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="p-4 border rounded-4 bg-light shadow-sm">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="fw-black text-uppercase small mb-0">Project Composition</h6>
+                        <span class="small text-muted fw-bold">React Architecture</span>
+                    </div>
+                    <div class="progress gh-bar mb-3">
+                        <div class="progress-bar" style="width: 68%; background-color: #f1e05a;"></div> <div class="progress-bar" style="width: 22%; background-color: #563d7c;"></div> <div class="progress-bar" style="width: 7%; background-color: #e34c26;"></div>  <div class="progress-bar" style="width: 3%; background-color: #ededed;"></div>  </div>
+                    <div class="row g-2">
+                        <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1 text-warning"></i> JS <span class="text-muted fw-normal">68.4%</span></div>
+                        <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #563d7c;"></i> CSS <span class="text-muted fw-normal">21.9%</span></div>
+                        <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #e34c26;"></i> HTML <span class="text-muted fw-normal">6.7%</span></div>
+                        <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1 text-secondary"></i> JSON <span class="text-muted fw-normal">3.0%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <h5 class="fw-black text-uppercase small border-bottom pb-2">Frontend Stack</h5>
+                <p class="small text-muted">React.js, Hooks (useState/useEffect), Component Architecture, React Router for seamless navigation.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-black text-uppercase small border-bottom pb-2">Database</h5>
+                <p class="small text-muted">MongoDB Atlas for scalable, NoSQL inventory management and eco-conscious product tracking.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-black text-uppercase small border-bottom pb-2">Key Features</h5>
+                <p class="small text-muted">Resale listing engine, upcycling project tracking, and high-performance product filtering systems.</p>
+            </div>
+        </div>
+
+        <h2 class="fw-black text-uppercase mb-4" style="letter-spacing: 2px;">Project Gallery</h2>
+        <div class="row g-4">
+            <div class="col-6 col-md-4">
+                <img src="../assets/img/reclair-1.jpeg" class="gallery-item w-100 shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg(this.src)">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../assets/img/reclair-2.jpeg" class="gallery-item w-100 shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg(this.src)">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../assets/img/reclair-3.jpeg" class="gallery-item w-100 shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg(this.src)">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../assets/img/reclair-4.jpeg" class="gallery-item w-100 shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg(this.src)">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../assets/img/reclair-5.jpeg" class="gallery-item w-100 shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg(this.src)">
+            </div>
+            <div class="col-6 col-md-4">
+                <img src="../assets/img/reclair-6.jpeg" class="gallery-item w-100 shadow-sm border rounded-3" data-bs-toggle="modal" data-bs-target="#imgModal" onclick="setModalImg(this.src)">
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="imgModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 text-center">
+                    <img src="" id="modalTarget" class="img-fluid rounded-4 shadow-lg border border-dark">
+                    <div class="mt-3">
+                        <button class="btn btn-light rounded-pill px-5 fw-bold shadow" data-bs-dismiss="modal">CLOSE VIEW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 text-center text-muted border-top bg-white small mt-5">
+        © 2026 RUMAYSA KHAN • SUSTAINABLE DEVELOPMENT
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function setModalImg(src) {
+            document.getElementById('modalTarget').src = src;
+        }
+    </script>
+</body>
+</html>

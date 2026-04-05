@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumaysa Khan | Full Stack Developer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+<style>
+        /* Essential styles for the "Locked" state */
+        #portfolio-wrapper {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        .fw-black { font-weight: 900 !important; }
+        .tracking-widest { letter-spacing: 0.1em; }
+        .profile-frame { border: 2px solid #000; padding: 10px; display: inline-block; }
+        .profile-img { width: 100%; max-width: 300px; height: auto; }
+        .category-tag { font-size: 0.7rem; font-weight: 800; text-transform:uppercase; color: #666; display: block; margin-bottom: 5px; }
+        .project-card { border: 1px solid #eee; transition: transform 0.3s ease; }
+        .project-card:hover { transform: translateY(-5px); }
+        
+        /* Modal Customization */
+        .modal-content { border-radius: 2rem !important; border: none !important; }
+        #toggleAuth { color: #000; text-decoration: underline; cursor: pointer; font-size: 0.85rem; font-weight: 700; }
+        .animate-fade-in { animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-white">
+
+    <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content shadow-lg">
+                <div class="modal-body p-4 text-center">
+                    <h3 class="fw-black mb-1" id="authTitle">Portal Access</h3>
+                    <p class="small text-muted mb-4" id="authSubtitle">Please sign in to continue</p>
+                    
+                    <form id="authForm">
+                        <input type="email" id="email" class="form-control mb-3 rounded-pill bg-light border-0 px-3" placeholder="Email" required>
+                        <input type="password" id="password" class="form-control mb-4 rounded-pill bg-light border-0 px-3" placeholder="Password" required>
+                        <button type="submit" id="authBtn" class="btn btn-dark w-100 rounded-pill fw-bold">SIGN IN</button>
+                    </form>
+
+                    <div class="mt-3">
+                        <span id="toggleAuth">Need an account? Register</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-white border-bottom py-3">
+        <div class="container">
+            <a class="navbar-brand fw-extrabold" href="#">RK<span>.</span></a>
+            <div class="ms-auto d-flex align-items-center">
+                <div class="navbar-nav flex-row me-4 small fw-bold text-uppercase tracking-widest">
+                    <a class="nav-link px-3" href="#projects">Projects</a>
+                    <a class="nav-link px-3" href="#experience">Experience</a>
+                    <a class="nav-link px-3 d-none d-md-block" href="#education">Education</a>
+                    <a class="nav-link px-3" href="contact.html">Contact</a>
+                    </div>
+               <div id="auth-zone">
+                        <button class="btn btn-dark btn-sm rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#loginModal">LOGIN</button>
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section bg-white border-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center text-lg-start mb-5 mb-lg-0">
+                    <div class="profile-frame">
+                        <img src="assets/img/my-profile.jpg" alt="Rumaysa Khan" class="profile-img">
+                    </div>
+                </div>
+                <div class="col-lg-8 ps-lg-5">
+                    <p class="text-uppercase tracking-widest small fw-black text-muted mb-2">Portfolio 2026</p>
+                    <h1 class="display-4 fw-black mb-4">RUMAYSA KHAN</h1>
+                    <p class="lead text-secondary about-text">
+                       <p style="text-align: justify;">  Enthusiastic BCA (AI) student with strong foundations in HTML, CSS, JavaScript, and React, and a working knowledge of Python and web application development. Experienced in building responsive web projects, integrating APIs, and applying modern development practices using Git and component-based architecture. Passionate about solving real-world problems through clean, user-focused interfaces and continuous learning. Eager to contribute to full-stack web development projects and collaborate in a structured software development environment.
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        
+       <section id="projects" class="mb-5 pb-5">
+    <h2 class="section-title mb-5">Projects</h2>
+    <div class="row g-4">
+        
+        <div class="col-md-6">
+            <div class="card project-card h-100">
+                <img src="assets/img/sw-1.png" class="card-img-top" alt="SmartWheels">
+                <div class="card-body p-4">
+                    <span class="category-tag mb-2">Python • System Design</span>
+                    <h4 class="fw-bold">SmartWheels</h4>
+                    <p class="small text-muted">A robust car booking system featuring real-time inventory tracking, secure user authentication, and an automated booking ledger.</p>
+                    <a href="project-pages/smartwheels.html" class="btn btn-dark btn-sm rounded-pill mt-2 px-4">Details →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card project-card h-100">
+                <img src="assets/img/reclair-1.jpeg" class="card-img-top" alt="The Reclair">
+                <div class="card-body p-4">
+                    <span class="category-tag mb-2">React • Sustainability</span>
+                    <h4 class="fw-bold">The Reclair</h4>
+                    <p class="small text-muted">An e-commerce platform dedicated to the circular economy, focusing on the resale and upcycling of clothing and accessories.</p>
+                    <a href="project-pages/reclair.html" class="btn btn-dark btn-sm rounded-pill mt-2 px-4">Details →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+    <div class="card project-card h-100">
+        <img src="assets/img/scentilla-1.png" class="card-img-top" alt="Scentilla E-commerce">
+        <div class="card-body p-4">
+            <span class="category-tag mb-2">Frontend • JavaScript • UX/UI</span>
+            <h4 class="fw-bold">Scentilla</h4>
+            <p class="small text-muted">A luxury fragrance e-commerce experience featuring dynamic product filtering, interactive scent profiles, and a seamless responsive interface.</p>
+            <a href="project-pages/scentilla.html" class="btn btn-dark btn-sm rounded-pill mt-2 px-4">Details →</a>
+        </div>
+    </div>
+</div>
+
+        <div class="col-md-6">
+    <div class="card project-card h-100">
+        <img src="assets/img/covid-1.png" class="card-img-top" alt="COVID-19 Analysis">
+        <div class="card-body p-4">
+            <span class="category-tag mb-2">Data Science • Python • Visualization</span>
+            <h4 class="fw-bold">COVID-19 Global Trends</h4>
+            <p class="small text-muted">A comprehensive data analysis project tracking global infection rates and vaccination trends using Pandas and Matplotlib.</p>
+            <a href="project-pages/covid-analysis.html" class="btn btn-dark btn-sm rounded-pill mt-2 px-4">Details →</a>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+    </div>
+<section id="experience" class="py-5 border-top">
+    <div class="row align-items-center">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <p class="text-uppercase tracking-widest small **fw-black** text-muted mb-2">Student Forum</p>
+            <h2 class="display-5 **fw-black** mb-4" style="font-family: 'Inter'; letter-spacing: -1px;"><b>EXPERIENCE</b></h2>
+        </div>
+        <div class="col-lg-8 border-start border-2 border-dark ps-lg-5">
+            <div class="experience-item">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h4 class="**fw-bold** mb-0">Awaaz (The Student Council)</h4>
+                    <span class="badge bg-dark rounded-pill px-3">CORE MEMBER</span>
+                </div>
+                <p class="text-muted **fw-bold** small mb-3 text-uppercase">Event Coordination & Logistics</p>
+                <ul class="text-secondary small lh-lg">
+                    <li>Managed complex logistics and cross-functional communication for large-scale university fests.</li>
+                    <li>Enhanced student engagement through strategic outreach, increasing participation by 20%.</li>
+                    <li>Coordinated with external vendors to ensure operational excellence and budget compliance.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact-cta" class="py-5 border-top text-center">
+                <div class="contact-card p-5">
+                    <h2 class="fw-black mb-3">Let's build something together.</h2>
+                    <p class="text-muted mb-4">I'm currently looking for apprenticeship and internship opportunities.</p>
+                    <a href="contact.html" class="btn btn-dark btn-lg rounded-pill px-5 fw-bold">GET IN TOUCH</a>
+                </div>
+            </section>
+
+<section id="certifications" class="py-5 border-top">
+    <div class="row align-items-center">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <p class="text-uppercase tracking-widest small **fw-black** text-muted mb-2">Continuous Learning</p>
+            <h2 class="display-5 **fw-black** mb-4" style="font-family: 'Inter'; letter-spacing: -1px;"><strong>CERTIFICATIONS</strong></h2>
+        </div>
+        <div class="col-lg-8 ps-lg-5">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="p-4 border rounded-4 bg-light h-100">
+                        <h6 class="**fw-black** text-uppercase small mb-1"><b>Full Stack Development</b></h6>
+                        <p class="small text-muted mb-0">Meta / Coursera Specialization</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 border rounded-4 bg-light h-100">
+                        <h6 class="**fw-black** text-uppercase small mb-1"><b>Python for Data Science</b></h6>
+                        <p class="small text-muted mb-0">IBM Professional Certificate</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 border rounded-4 bg-light h-100">
+                        <h6 class="**fw-black** text-uppercase small mb-1"><b>UI/UX Design Essentials</b></h6>
+                        <p class="small text-muted mb-0">Google UX Design Professional</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 border rounded-4 bg-light h-100">
+                        <h6 class="**fw-black** text-uppercase small mb-1"><b>Git & Version Control</b></h6>
+                        <p class="small text-muted mb-0">GitHub Foundations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="py-5 border-top">
+    <div class="row align-items-center">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <p class="text-uppercase tracking-widest small **fw-black** text-muted mb-2">Capabilities</p>
+            <h2 class="display-5 **fw-black** mb-4" style="font-family: 'Inter'; letter-spacing: -1px;"><b>SKILLSET</b></h2>
+        </div>
+        <div class="col-lg-8 ps-lg-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h6 class="**fw-black** text-uppercase small border-bottom border-2 border-dark pb-2 mb-3"><b>Frontend</b></h6>
+                    <p class="small text-secondary lh-base">React.js, JavaScript (ES6+), HTML5, CSS3, Bootstrap 5</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="**fw-black** text-uppercase small border-bottom border-2 border-dark pb-2 mb-3"><b>Backend & AI</b></h6>
+                    <p class="small text-secondary lh-base">Python, SQL, NLP, API Integration, System Architecture</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="**fw-black** text-uppercase small border-bottom border-2 border-dark pb-2 mb-3"><b>Tools</b></h6>
+                    <p class="small text-secondary lh-base">Git, GitHub, VS Code, Component-Based Architecture</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="py-5 border-top">
+    <div class="row align-items-center">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <p class="text-uppercase tracking-widest small **fw-black** text-muted mb-2">Academic Foundation</p>
+            <h2 class="display-5 **fw-black** mb-4" style="font-family: 'Inter'; letter-spacing: -1px;"><b>EDUCATION</b></h2>
+        </div>
+        <div class="col-lg-8 ps-lg-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="edu-card p-4 border-0 bg-light rounded-4 h-100">
+                        <span class="badge bg-white text-dark border rounded-pill mb-3 **fw-bold**">CURRENT</span>
+                        <h5 class="**fw-black** mb-1">BCA (AI)</h5>
+                        <p class="small text-muted mb-2">Jain University, BLR</p>
+                        <p class="**fw-bold** text-dark mb-0">GPA: 8.67</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="edu-card p-4 border-0 bg-light rounded-4 h-100">
+                        <span class="text-muted small **fw-bold** mb-3 d-block text-uppercase">Class XII</span>
+                        <h5 class="**fw-black** mb-1">PCMC</h5>
+                        <p class="small text-muted mb-2">Jyoti Nivas College</p>
+                        <p class="**fw-bold** text-dark mb-0">85%</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="edu-card p-4 border-0 bg-light rounded-4 h-100">
+                        <span class="text-muted small **fw-bold** mb-3 d-block text-uppercase">Class X</span>
+                        <h5 class="**fw-black** mb-1">ICSE</h5>
+                        <p class="small text-muted mb-2">Baldwin Girls' High</p>
+                        <p class="**fw-bold** text-dark mb-0">89%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow-lg rounded-5">
+                <div class="modal-body p-4 text-center">
+                    <h3 class="fw-black mb-4">Portal Access</h3>
+                    <input type="email" class="form-control mb-3 rounded-pill bg-light border-0 px-3" placeholder="Email">
+                    <input type="password" class="form-control mb-4 rounded-pill bg-light border-0 px-3" placeholder="Password">
+                    <button class="btn btn-dark w-100 rounded-pill fw-bold">SIGN IN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 text-center text-muted border-top bg-white small">
+        © 2026 RUMAYSA KHAN • 26RUMAYSAKHAN@GMAIL.COM
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const authModal = new bootstrap.Modal(document.getElementById('loginModal'));
+            const authForm = document.getElementById('authForm');
+            const toggleAuth = document.getElementById('toggleAuth');
+            const wrapper = document.getElementById('portfolio-wrapper');
+            const authZone = document.getElementById('auth-zone');
+            
+            let isLoginMode = true;
+
+            // 1. Initial State Check
+            if (localStorage.getItem('isPortfolioAuth') === 'true') {
+                showPortfolio();
+            } else {
+                authModal.show();
+            }
+
+            // 2. Toggle between Login and Register
+            toggleAuth.addEventListener('click', () => {
+                isLoginMode = !isLoginMode;
+                document.getElementById('authTitle').innerText = isLoginMode ? "Portal Access" : "Create Account";
+                document.getElementById('authSubtitle').innerText = isLoginMode ? "Please sign in to continue" : "Join the developer portal";
+                document.getElementById('authBtn').innerText = isLoginMode ? "SIGN IN" : "REGISTER";
+                toggleAuth.innerText = isLoginMode ? "Need an account? Register" : "Already have an account? Login";
+            });
+
+            // 3. Handle Form Submission
+            authForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('email').value;
+                const pass = document.getElementById('password').value;
+
+                if (isLoginMode) {
+                    // Login Logic
+                    if (localStorage.getItem(email) === pass) {
+                        localStorage.setItem('isPortfolioAuth', 'true');
+                        localStorage.setItem('currentUserEmail', email);
+                        authModal.hide();
+                        showPortfolio();
+                    } else {
+                        alert("Invalid credentials. Please register first if you haven't.");
+                    }
+                } else {
+                    // Register Logic
+                    localStorage.setItem(email, pass);
+                    alert("Registration successful! Now please sign in.");
+                    isLoginMode = true;
+                    toggleAuth.click(); // Reset modal UI to login
+                }
+            });
+
+            // 4. Reveal Portfolio Function
+            function showPortfolio() {
+                const savedEmail = localStorage.getItem('currentUserEmail');
+                const name = savedEmail ? savedEmail.split('@')[0].toUpperCase() : "DEV";
+
+                // Update Navbar with Name and Logout button
+                authZone.innerHTML = `
+                    <div class="d-flex align-items-center animate-fade-in">
+        <span class="me-3 small fw-bold text-uppercase tracking-wider text-muted" style="font-size: 0.7rem; letter-spacing: 1px;">
+            Hi, Rumaysa
+        </span>
+        <button class="btn-logout-pill" onclick="logout()" title="Logout">
+            <i class="fa-solid fa-power-off"></i>
+            <span class="logout-text">LOGOUT</span>
+        </button>
+    </div>
+`;
+
+                // Show Content
+                wrapper.style.display = 'block';
+                setTimeout(() => { wrapper.style.opacity = '1'; }, 50);
+            }
+        });
+
+        // 5. Global Logout Function
+        function logout() {
+            localStorage.removeItem('isPortfolioAuth');
+            localStorage.removeItem('currentUserEmail');
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
