@@ -298,3 +298,100 @@ body {
     }
     }
 }
+/* --- SKILLS & EXPERIENCE MOBILE OPTIMIZATION --- */
+@media (max-width: 768px) {
+    /* 1. Scale down Section Titles */
+    .section-title {
+        font-size: 1.4rem !important;
+        margin-bottom: 1.5rem !important;
+        letter-spacing: 0.02rem;
+    }
+
+    /* 2. Compact the Experience Timeline */
+    .border-start.border-dark {
+        border-left-width: 2px !important;
+        padding-left: 15px !important;
+        margin-left: 2px;
+        margin-top: 10px !important; /* Overriding your 20px desktop gap */
+    }
+
+    .experience-item h4 {
+        font-size: 1.1rem;
+    }
+
+    /* 3. Compact Skills Grid */
+    .skill-item {
+        margin-bottom: 12px !important;
+    }
+
+    .skill-item h6 {
+        font-size: 0.65rem !important;
+        letter-spacing: 0.02rem;
+    }
+
+    .skill-underline {
+        border-bottom-width: 2px !important;
+    }
+
+    /* 4. Compact Education & Cert Cards */
+    .edu-card, .cert-card {
+        padding: 15px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .edu-card h5, .cert-card h6 {
+        font-size: 0.9rem;
+    }
+
+    /* 5. Reduce overall scrolling length */
+    section {
+        padding: 40px 0 !important;
+    }
+    
+    .hero-section {
+        padding-bottom: 40px !important;
+    }
+}
+/* --- MOBILE-SPECIFIC OVERRIDES --- */
+@media (max-width: 767px) {
+    /* Shrink the massive 60px gap at the top */
+    :root {
+        --content-gap: 15px !important;
+        --nav-height: 60px !important;
+    }
+
+    body {
+        padding-top: 80px !important; /* Forces the content up */
+    }
+
+    /* Shrink the Section Headings */
+    .section-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* Make the Experience items much tighter */
+    .experience-item {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .experience-item h4 {
+        font-size: 1rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    /* Skills: Force them into a 2-column grid if they aren't already */
+    .skill-item {
+        padding: 5px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Reduce the massive white space between sections */
+    section {
+        padding: 25px 0 !important;
+    }
+
+    .hero-section {
+        padding-bottom: 30px !important;
+    }
+}
