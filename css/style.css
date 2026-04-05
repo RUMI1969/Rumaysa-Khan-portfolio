@@ -268,4 +268,33 @@ body {
         height: 220px;
         margin-bottom: 30px;
     }
+    @media (max-width: 991.98px) {
+    /* Adjust body padding so content doesn't hide under the navbar */
+    body {
+        padding-top: 100px !important;
+    }
+
+    /* Style the dropdown menu to match your high-contrast look */
+    .navbar-collapse {
+        background-color: var(--white);
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 12px 0 !important;
+        border-bottom: 1px solid var(--gray-light);
+    }
+
+    /* Make the Login button full-width on mobile for better UX */
+    #auth-zone .btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Custom Black Hamburger Icon */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+    }
 }
