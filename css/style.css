@@ -1,397 +1,149 @@
-/* --- CSS VARIABLES: GLOBAL SETTINGS --- */
 :root {
-    --black: #000000;
-    --white: #ffffff;
-    --gray-dark: #1a1a1a;
-    --gray-medium: #666666;
-    --gray-light: #f8f9fa;
-    --border-color: #eeeeee;
-    
-    /* THE SPACING CONTROL */
-    --nav-height: 80px;      
-    --content-gap: 60px;     
-}
-
-/* --- RESET & BASE STYLES --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --primary-dark: #561c24;
+    --burgundy: #6D2932;
+    --clay-tan: #C7B7A3;
+    --warm-cream: #E8D8C4;
+    --soft-bg: #FDFBF9;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--black);
-    background-color: var(--white);
-    line-height: 1.6;
-    padding-top: calc(var(--nav-height) + var(--content-gap));
-    -webkit-font-smoothing: antialiased;
+    /* Replace 'assets/img/download.jfif' with your actual file path */
+    background-image: url('assets/img/download.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Optional: ensures text remains readable over the image */
 }
 
-/* --- THE "BOLD" OVERRIDE --- */
-/* This ensures headings reach the maximum weight of the Inter font */
-.fw-black {
-    font-weight: 900 !important;
-}
-
-.section-header {
-    font-weight: 900 !important;
-    letter-spacing: -1.5px;
-    text-transform: uppercase;
-}
-
-/* --- NAVIGATION --- */
-.navbar {
-    height: var(--nav-height);
-    background-color: var(--white) !important;
+/* --- Global UI Utilities --- */
+.btn-maroon {
+    background-color: var(--primary-dark);
+    color: #ffffff !important;
+    border: none;
     transition: all 0.3s ease;
 }
 
-.navbar-brand {
-    font-weight: 900;
-    font-size: 1.3rem;
-    letter-spacing: -0.04rem;
-    text-transform: uppercase;
+.btn-maroon:hover {
+    background-color: var(--burgundy);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(86, 28, 36, 0.2);
 }
 
-.navbar-brand span {
-    color: #cccccc;
+.text-maroon {
+    color: var(--primary-dark) !important;
 }
 
-.nav-link {
+/* --- Scroll Reveal --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Project & Certification Boxes --- */
+.maroon-project-box {
+    position: relative;
+    background-color: var(--primary-dark);
+    border-radius: 2rem;
+    padding: 2rem;
+    color: #fff;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.maroon-project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(86, 28, 36, 0.2);
+}
+
+/* --- Education Section Cards --- */
+.education-box {
+    background-color: #FDF5ED;
+    border: 1px solid var(--warm-cream);
+    border-radius: 1.5rem;
+    transition: all 0.4s ease;
+}
+
+.education-box:hover {
+    background-color: rgba(86, 28, 36, 0.04) !important; 
+    transform: translateY(-5px);
+    border-color: var(--primary-dark);
+    cursor: default;
+}
+
+/* --- Hero Section --- */
+.template-hero {
+    min-height: 100vh;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    border-bottom: 1px solid var(--warm-cream);
+}
+
+.hero-giant-title {
+    position: absolute;
+    left: 50%;
+    top: 30%; /* Slightly adjusted */
+    transform: translate(-50%, -50%);
+    font-family: 'Oswald', sans-serif;
+    font-size: 12vw; /* Reduced from 14vw */
     font-weight: 700;
-    color: var(--gray-medium) !important;
-    transition: color 0.2s ease;
+    color: var(--burgundy);
+    line-height: 0.8;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
 }
 
-.nav-link:hover {
-    color: var(--black) !important;
-}
-
-/* --- HERO / ABOUT SECTION --- */
-.hero-section {
-    padding-bottom: 80px;
-}
-
-.display-4 {
-    font-weight: 900;
-    letter-spacing: -0.15rem;
-    line-height: 1.1;
-}
-
-.about-text {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--gray-dark);
-    max-width: 850px;
-    margin-top: 2rem;
-}
-
-/* --- PROFILE IMAGE FRAME --- */
-.profile-frame {
-    width: 280px;
-    height: 280px;
+.template-circle-frame {
+    width: 310px;
+    height: 310px;
     border-radius: 50%;
     overflow: hidden;
-    background: var(--white);
-    box-shadow: 0 40px 100px rgb(250, 248, 248);
-    margin: 0 auto;
-    border: none !important;
-}
-
-.profile-img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover; /* Ensures the image doesn't stretch */
-    border-radius: 50%; /* Makes it a perfect circle */
-    box-shadow: 0 20px 40px rgb(252, 250, 250); /* Soft, classy shadow */
-    transition: transform 0.3s ease;
-}
-.profile-img:hover {
-    transform: translateY(-10px); /* Subtle lift on hover */
-}
-/* --- SECTION TITLES & HEADINGS --- */
-.section-title {
-    font-weight: 900;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    margin-bottom: 2.5rem;
-}
-
-/* --- EXPERIENCE & SPLIT SECTIONS --- */
-/* The dark vertical line in the Experience section */
-.border-start.border-dark {
-    border-left-width: 3px !important;
-}
-
-.experience-item h4 {
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
-
-/* --- PROJECT CARDS --- */
-.project-card {
-    border: 1px solid var(--border-color);
-    border-radius: 28px;
-    overflow: hidden;
-    background: var(--white);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-    border-color: var(--black);
-}
-
-.category-tag { 
-    font-size: 0.7rem; 
-    font-weight: 800; 
-    text-transform: uppercase; /* Fixed: Added colon and 'transform' */
-    color: #666; 
-    display: block; 
-    margin-bottom: 5px; 
-}
-
-/* --- SKILLS & CERTIFICATIONS GRID --- */
-.skill-item h6, .cert-card h6 {
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.05rem;
-}
-
-.skill-underline {
-    border-bottom: 3px solid var(--black) !important;
-}
-
-/* Hover effect for Certifications & Education */
-.edu-card, .cert-card {
-    border: 1px solid var(--border-color) !important;
-    transition: all 0.3s ease;
-    background-color: var(--gray-light);
-}
-
-.edu-card:hover, .cert-card:hover {
-    background-color: var(--white) !important;
-    border-color: var(--black) !important;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.edu-card h5, .cert-card h6 {
-    font-weight: 900;
-}
-
-/* --- BUTTONS --- */
-.btn-dark {
-    font-weight: 800;
-    padding: 12px 28px;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.05rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-
-.btn-dark:hover {
-    transform: scale(1.05);
-    background-color: var(--black);
-}
-
-/* --- AUTHENTICATION & LOGOUT --- */
-.btn-logout-pill {
-    display: inline-flex;
+    background: var(--soft-bg);
+    display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 16px;
-    background-color: transparent;
-    color: var(--gray-medium); /* Uses your existing variable */
-    border: 1.5px solid var(--border-color); /* Uses your existing variable */
-    border-radius: 50px;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    outline: none;
+    justify-content: center;
+    z-index: 2;
 }
 
-.btn-logout-pill i {
-    font-size: 0.75rem;
-    transition: transform 0.3s ease;
+.hero-script-signature {
+    font-family: 'Mr De Haviland', cursive;
+    font-size: 8rem;
+    color: var(--primary-dark); 
+    line-height: 0.5;
+    z-index: 3;
+    transform: rotate(-5deg);
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    left: -40px;
+    top: 5px; /* Reduced from 80px to pull it up */
+    white-space: nowrap;
 }
 
-.btn-logout-pill:hover {
-    background-color: #fff5f5; /* Soft red tint */
-    border-color: #ffccd2;
-    color: #e63946; /* Professional red accent */
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(230, 57, 70, 0.08);
-}
+/* --- Navbar --- */
+.navbar { background-color: #fff !important; border-bottom: 1px solid var(--warm-cream) !important; }
+.nav-link { color: var(--primary-dark) !important; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.1em; }
 
-.btn-logout-pill:hover i {
-    transform: rotate(90deg); /* Subtle micro-interaction */
-}
-
-/* Fade-in for the auth zone appearance */
-.animate-fade-in {
-    animation: authFadeIn 0.5s ease forwards;
-}
-
-@keyframes authFadeIn {
-    from { opacity: 0; transform: translateX(10px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 991px) {
-    :root {
-        --content-gap: 30px;
-    }
-    
-    .display-4 {
-        font-size: 2.5rem;
-        letter-spacing: -1px;
-    }
-
-    .border-start {
-        border-left: none !important;
-        padding-left: 0 !important;
-        margin-top: 20px;
-    }
-    
-    .profile-frame {
-        width: 220px;
-        height: 220px;
-        margin-bottom: 30px;
-    }
-    @media (max-width: 991.98px) {
-    /* Adjust body padding so content doesn't hide under the navbar */
-    body {
-        padding-top: 100px !important;
-    }
-
-    /* Style the dropdown menu to match your high-contrast look */
-    .navbar-collapse {
-        background-color: var(--white);
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    .nav-link {
-        padding: 12px 0 !important;
-        border-bottom: 1px solid var(--gray-light);
-    }
-
-    /* Make the Login button full-width on mobile for better UX */
-    #auth-zone .btn {
-        width: 100%;
-        padding: 12px;
-    }
-
-    /* Custom Black Hamburger Icon */
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-    }
-    }
-}
-/* --- SKILLS & EXPERIENCE MOBILE OPTIMIZATION --- */
-@media (max-width: 768px) {
-    /* 1. Scale down Section Titles */
-    .section-title {
-        font-size: 1.4rem !important;
-        margin-bottom: 1.5rem !important;
-        letter-spacing: 0.02rem;
-    }
-
-    /* 2. Compact the Experience Timeline */
-    .border-start.border-dark {
-        border-left-width: 2px !important;
-        padding-left: 15px !important;
-        margin-left: 2px;
-        margin-top: 10px !important; /* Overriding your 20px desktop gap */
-    }
-
-    .experience-item h4 {
-        font-size: 1.1rem;
-    }
-
-    /* 3. Compact Skills Grid */
-    .skill-item {
-        margin-bottom: 12px !important;
-    }
-
-    .skill-item h6 {
-        font-size: 0.65rem !important;
-        letter-spacing: 0.02rem;
-    }
-
-    .skill-underline {
-        border-bottom-width: 2px !important;
-    }
-
-    /* 4. Compact Education & Cert Cards */
-    .edu-card, .cert-card {
-        padding: 15px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .edu-card h5, .cert-card h6 {
-        font-size: 0.9rem;
-    }
-
-    /* 5. Reduce overall scrolling length */
-    section {
-        padding: 40px 0 !important;
-    }
-    
-    .hero-section {
-        padding-bottom: 40px !important;
-    }
-}
-/* --- MOBILE-SPECIFIC OVERRIDES --- */
-@media (max-width: 767px) {
-    /* Shrink the massive 60px gap at the top */
-    :root {
-        --content-gap: 15px !important;
-        --nav-height: 60px !important;
-    }
-
-    body {
-        padding-top: 80px !important; /* Forces the content up */
-    }
-
-    /* Shrink the Section Headings */
-    .section-title {
-        font-size: 1.2rem !important;
-        margin-bottom: 1rem !important;
-    }
-
-    /* Make the Experience items much tighter */
-    .experience-item {
-        margin-bottom: 1.5rem !important;
-    }
-
-    .experience-item h4 {
-        font-size: 1rem !important;
-        margin-bottom: 2px !important;
-    }
-
-    /* Skills: Force them into a 2-column grid if they aren't already */
-    .skill-item {
-        padding: 5px !important;
-        margin-bottom: 10px !important;
-    }
-
-    /* Reduce the massive white space between sections */
-    section {
-        padding: 25px 0 !important;
-    }
-
-    .hero-section {
-        padding-bottom: 30px !important;
+/* --- Responsive --- */
+@media(max-width: 991px) {
+    .hero-giant-title { font-size: 13vw; } /* Slightly smaller than 15vw */
+    .hero-script-signature { 
+        font-size: 5rem; /* Smaller for mobile */
+        position: relative; 
+        top: -20px; /* Adjusts it up even on mobile */
     }
 }
