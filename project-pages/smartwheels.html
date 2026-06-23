@@ -34,6 +34,16 @@
             opacity: 0.85; 
             transform: translateY(-5px); 
         }
+        .project-info-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    border: none;
+}
+
+.project-info-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 25px -5px rgba(86, 28, 36, 0.3);
+    z-index: 10;
+}
         
         /* GitHub Style Language Bar */
         .gh-bar { height: 12px; border-radius: 6px; background-color: #f6f8fa; border: 1px solid #e1e4e8; overflow: hidden; }
@@ -52,8 +62,10 @@
     <main class="container py-5" style="margin-top: 80px;">
     <div class="row align-items-end mb-5 pb-4 border-bottom">
         <div class="col-lg-7">
-            <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 mb-3" style="font-size: 0.7rem;">VEHICLE MANAGEMENT • REACT</span>
-            <h1 class="display-3 fw-black" style="letter-spacing: -2px;">SmartWheels</h1>
+<span class="badge rounded-pill px-3 mb-3" 
+      style="font-size: 0.7rem; background-color: rgba(86, 28, 36, 0.1); color: #561c24;">
+      VEHICLE MANAGEMENT • REACT
+</span>            <h1 class="display-3 fw-black" style="letter-spacing: -2px;">SmartWheels</h1>
             <p class="lead text-secondary mt-3">
                 A streamlined vehicle management and booking platform built with React. This system focuses on user-centric design, real-time fleet availability, and a robust MongoDB backend for high-performance inventory tracking.
             </p>
@@ -66,31 +78,39 @@
                     <span class="small text-muted fw-bold">React Architecture</span>
                 </div>
                 <div class="progress gh-bar mb-3">
-                    <div class="progress-bar" style="width: 72%; background-color: #f1e05a;"></div> <div class="progress-bar" style="width: 18%; background-color: #563d7c;"></div> <div class="progress-bar" style="width: 7%; background-color: #e34c26;"></div>  <div class="progress-bar" style="width: 3%; background-color: #47A248;"></div>  </div>
+                    <div class="progress-bar" style="width: 72%; background-color: #561c24;"></div> <div class="progress-bar" style="width: 18%; background-color: #9c3d4a;"></div> <div class="progress-bar" style="width: 7%; background-color: #927f86;"></div>  <div class="progress-bar" style="width: 3%; background-color: #5a4b4b;"></div>  </div>
                 <div class="row g-2">
-                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1 text-warning"></i> JS <span class="text-muted fw-normal">72.1%</span></div>
-                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #563d7c;"></i> CSS <span class="text-muted fw-normal">18.4%</span></div>
-                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #e34c26;"></i> HTML <span class="text-muted fw-normal">6.5%</span></div>
-                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #47A248;"></i> NoSQL <span class="text-muted fw-normal">3.0%</span></div>
+                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #561c24;"></i> JS <span class="text-muted fw-normal">72.1%</span></div>
+                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #9c3d4a;"></i> CSS <span class="text-muted fw-normal">18.4%</span></div>
+                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #927f86;"></i> HTML <span class="text-muted fw-normal">6.5%</span></div>
+                    <div class="col-6 small fw-bold"><i class="fa-solid fa-circle lang-dot me-1" style="color: #5a4b4b;"></i> NoSQL <span class="text-muted fw-normal">3.0%</span></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row mb-5">
-        <div class="col-md-4">
-            <h5 class="fw-black text-uppercase small border-bottom pb-2">Frontend Stack</h5>
-            <p class="small text-muted">Developed with React.js, utilizing Hooks and Functional Components for a responsive, modular user interface.</p>
-        </div>
-        <div class="col-md-4">
-            <h5 class="fw-black text-uppercase small border-bottom pb-2">Data Management</h5>
-            <p class="small text-muted">Integrated MongoDB for dynamic storage of vehicle variants, pricing models, and user booking records.</p>
-        </div>
-        <div class="col-md-4">
-            <h5 class="fw-black text-uppercase small border-bottom pb-2">Key Features</h5>
-            <p class="small text-muted">Interactive fleet filtering, automated booking validation logic, and a clean administrative interface for inventory control.</p>
+   <div class="row mb-5 g-4">
+    <div class="col-md-4">
+        <div class="project-info-card p-4 rounded-4" style="background-color: #561c24; color: #fff; height: 100%;">
+            <h5 class="fw-black text-uppercase small border-bottom pb-2 mb-3" style="color: #E8D8C4;">Frontend Stack</h5>
+            <p class="small mb-0" style="opacity: 0.9;">Developed with React.js, utilizing Hooks and Functional Components for a responsive, modular user interface.</p>
         </div>
     </div>
+    
+    <div class="col-md-4">
+        <div class="project-info-card p-4 rounded-4" style="background-color: #561c24; color: #fff; height: 100%;">
+            <h5 class="fw-black text-uppercase small border-bottom pb-2 mb-3" style="color: #E8D8C4;">Data Management</h5>
+            <p class="small mb-0" style="opacity: 0.9;">Integrated MongoDB for dynamic storage of vehicle variants, pricing models, and user booking records.</p>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="project-info-card p-4 rounded-4" style="background-color: #561c24; color: #fff; height: 100%;">
+            <h5 class="fw-black text-uppercase small border-bottom pb-2 mb-3" style="color: #E8D8C4;">Key Features</h5>
+            <p class="small mb-0" style="opacity: 0.9;">Interactive fleet filtering, automated booking validation logic, and a clean administrative interface for inventory control.</p>
+        </div>
+    </div>
+</div>
 
        <h2 class="fw-black text-uppercase mb-4" style="letter-spacing: 2px;">System Preview</h2>
 <div class="row g-4 gallery-container">
