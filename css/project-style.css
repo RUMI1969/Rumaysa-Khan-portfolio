@@ -1,28 +1,24 @@
-/* CSS FOR PROJECT DETAIL PAGES (css/project-style.css) */
+/* --- Global Variables --- */
 :root {
-    --black: #000000;
-    --white: #ffffff;
-    --light-gray: #fcfcfc;
-    --border-color: #e1e4e8;
+    --primary-dark: #561c24;
+    --burgundy: #6D2932;
+    --clay-tan: #C7B7A3;
+    --warm-cream: #E8D8C4;
+    --soft-bg: #FDFBF9;
+    --border-color: #E8D8C4; /* Updated to match your theme */
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    color: var(--black);
-    background-color: var(--white);
+    color: var(--primary-dark);
+    background-color: var(--soft-bg);
     letter-spacing: -0.01rem;
     line-height: 1.6;
 }
 
-.fw-black {
-    /* Using Inter for the heavy weight to match your 'Inter' font-family links */
-    font-family: 'Inter', sans-serif;
-    font-weight: 900 !important;
-}
-
-.navbar {
-    padding: 1.2rem 0;
-    background-color: var(--white);
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-dark);
 }
 
 h1 { 
@@ -35,59 +31,77 @@ h2 {
     font-weight: 700;
 }
 
-.tracking-widest { 
-    letter-spacing: 0.15rem; 
+.fw-black {
+    font-weight: 900 !important;
 }
 
-/* GALLERY STYLING 
-   Fixes pixelation by using object-fit and centering the render logic.
-*/
+.tracking-widest { 
+    letter-spacing: 0.15rem; 
+    text-transform: uppercase;
+}
+
+/* --- Gallery & Image Containers --- */
 .img-container {
     position: relative;
     aspect-ratio: 16 / 9;
-    background-color: #ffffff; /* White background prevents "letterbox" bars from looking weird */
+    background-color: var(--soft-bg);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
+    border-radius: 2rem; /* Matches your project boxes */
+    transition: box-shadow 0.4s ease;
 }
 
-/* Update this section in project-style.css */
 .img-container img {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
-    
-    /* REMOVE: transform: translateZ(0) and backface-visibility */
-    /* These trigger the GPU in a way that 'file://' origins sometimes block */
-    
-    /* KEEP: High-quality scaling */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+    object-fit: cover; /* Changed to cover for a cleaner look */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Very subtle hover that doesn't cause pixel distortion */
+.img-container:hover {
+    box-shadow: 0 10px 30px rgba(86, 28, 36, 0.1);
+}
+
 .img-container:hover img {
-    transform: scale(1.02) translateZ(0);
+    transform: scale(1.05);
 }
 
-/* GITHUB STYLE BAR UI (For the project composition section) */
+/* --- UI Elements --- */
 .gh-bar { 
     height: 10px; 
     border-radius: 5px; 
-    background-color: #f6f8fa; 
+    background-color: #eee; 
     border: 1px solid var(--border-color); 
     overflow: hidden; 
 }
 
-.lang-dot { 
-    font-size: 0.6rem; 
-    vertical-align: middle; 
-}
-
-/* Category Tags */
 .category-tag {
     letter-spacing: 1px;
-    color: #6c757d;
+    color: var(--burgundy);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.navbar {
+    padding: 1.5rem 0;
+    background-color: var(--soft-bg) !important;
+    border-bottom: 1px solid var(--warm-cream);
+}
+/* --- Project Detail Box Styling --- */
+.maroon-project-box {
+    position: relative;
+    background-color: #561c24; /* Your primary maroon */
+    border-radius: 2rem;
+    padding: 2.5rem;
+    color: #ffffff;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.maroon-project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(86, 28, 36, 0.3);
 }
